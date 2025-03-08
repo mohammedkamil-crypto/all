@@ -24,7 +24,26 @@ main {
   border-radius: 5px;
   margin-bottom: 70px;
 }
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
 
+#contact-form input,
+#contact-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
 .work h2 {
   margin-top: 0;
 }
@@ -52,4 +71,112 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
+  height:70px;
+}
+
+/* Social Links Styling */
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  text-decoration: none;
+  color: white;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  background-color: #555; /* Default background */
+}
+
+/* Social Icons */
+.social-btn i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+/* Specific Colors for Each Platform */
+.social-btn.github {
+  background-color: #24292e;
+}
+
+.social-btn.twitter {
+  background-color: #1da1f2;
+}
+
+.social-btn.linkedin {
+  background-color: #0077b5;
+}
+
+/* Hover Effects */
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  filter: brightness(1.1);
+}
+
+.social-btn.github:hover {
+  background-color: #333;
+}
+
+.social-btn.twitter:hover {
+  background-color: #1a91da;
+}
+
+.social-btn.linkedin:hover {
+  background-color: #006699;
+}
+
+/* Responsive adjustment */
+@media (max-width: 480px) {
+  .social-links {
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0; /* Increased padding for better spacing */
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: auto; /* Changed from fixed 70px to auto for flexibility */
+  box-sizing: border-box;
+}
+
+/* Add margin below the contact form button */
+#contact-form button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 20px; /* Added margin to separate from footer */
+}
+
+/* Ensure the body has enough padding to prevent overlap */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 120px; /* Extra padding to account for footer height */
+}
+
+/* Social Links Styling (unchanged but included for context) */
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
